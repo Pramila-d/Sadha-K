@@ -1,207 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fde2e2; /* Light Pink Background */
-            color: #333;
-        }
-
-        header {
-            background-color: #3a3a3a;
-            color: #fff;
-            text-align: center;
-            padding: 3rem 0;
-            position: relative;
-        }
-
-        .profile-picture {
-            width: 100px; /* Medium Size */
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #fff;
-            display: block;
-            margin: 0 auto 10px; /* Center Image */
-        }
-
-        .header-content h1 {
-            font-size: 2.2rem;
-            margin: 0;
-        }
-
-        .header-content p {
-            font-size: 1.2rem;
-            margin-top: 5px;
-            color: #ddd;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #555;
-            color: #fff;
-            text-align: center;
-            padding: 0.5rem 0;
-            width: 100%;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: nowrap;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 12px;
-            font-size: 1rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ddd;
-        }
-
-        .section {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 1.8rem;
-            color: #444;
-            margin-bottom: 15px;
-        }
-
-        .section p, .section ul {
-            font-size: 1rem;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        .section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .section ul li {
-            background: #f0f0f0;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-        }
-
-        .download-button {
-            display: inline-block;
-            background-color: #3a3a3a;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-
-        .download-button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #3a3a3a;
-            color: #fff;
-            margin-top: 20px;
-        }
-
-        /* Smooth Scroll Effect */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <img src="passport_photo.jpg" alt="Profile Picture" class="profile-picture">
-        <div class="header-content">
-            <h1>Sindhu K J</h1>
-            <p>Software Developer | Web Enthusiast</p>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishnika D - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Krishnika D</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </div>
     </nav>
-
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a dedicated software developer with a passion for creating engaging web applications. 
-            Specializing in front-end development, I focus on intuitive UI/UX, modern web designs, and 
-            seamless user experiences. Always eager to learn, I stay updated with the latest trends in 
-            web development.
-        </p>
+    <nav id="hamburger-nav">
+      <div class="logo">Krishnika D</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Krishnika D profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Krishnika D</h1>
+        <p class="section__text__p2">Fresher Web Designer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/KrishnikaD_Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://pramila-d.github.io/Digital_portfolio/'"
+          />
+        </div>
+      </div>
     </section>
-
-    <section id="education" class="section">
-        <h2>Education</h2>
-        <p><strong>BSc Computer Science</strong> - Bharathiar University</p>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Krishnika profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Fresher<br />Web Design</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Computer Science<br />Bharathiyar University</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am a passionate web designer, recently graduated with a B.Sc. in Computer Science from Bharathiyar University. 
+              I enjoy creating clean, modern and responsive websites using HTML, CSS, and Bootstrap!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
-
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>Linux</li>
-            <li>HTML, CSS</li>
-            <li>Bootstrap</li>
-        </ul>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Web Design Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Proficient</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Proficient</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Proficient</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
     </section>
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">Digital Portfolio</a></li>
-        </ul>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container placeholder-project">
+              <p>
+                I am currently working on building web design projects to showcase my skills. Stay tuned!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </section>
-
-    <section id="resume" class="section">
-        <h2>Resume</h2>
-        <a href="file.pdf" target="_blank" class="download-button">Download CV</a>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:luvlygurldk@gmail.com">luvlygurldk@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/phone.png"
+            alt="Phone icon"
+            class="icon contact-icon"
+          />
+          <p><a href="tel:+919944664341">9944664341</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="GitHub icon"
+            class="icon contact-icon"
+            onclick="location.href='https://pramila-d.github.io/Digital_portfolio/'"
+            style="cursor: pointer;"
+          />
+          <p><a href="https://pramila-d.github.io/Digital_portfolio/" target="_blank" rel="noopener noreferrer">GitHub Profile</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
     </section>
-
     <footer>
-        <p>&copy; 2025 Sindhu K J | All Rights Reserved</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Krishnika D. All Rights Reserved.</p>
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-          
+    
